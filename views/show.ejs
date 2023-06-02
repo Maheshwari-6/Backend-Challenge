@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>show</title>
+</head>
+<body>
+    <h2>Welcome To Facebook</h2>
+
+    <a href="/feed">Home</a>
+
+    <div class="show-article">
+        <div class="fullArticle">
+        <h2><%= user.name %></h2>
+        <p ><%= user.message %></p>
+        </div>
+
+    <form action="/feed/delete-user/<%= user._id %>" method="post">
+        <button>Delete</button>
+        <a href="/feed/edit/<%=user._id %>">edit</a>
+    </form>
+
+</body>
+</html>
